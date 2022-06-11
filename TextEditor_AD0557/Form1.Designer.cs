@@ -169,8 +169,9 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(24, 53);
+            this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 22);
+            this.txtName.Size = new System.Drawing.Size(118, 58);
             this.txtName.TabIndex = 3;
             // 
             // lblName
@@ -185,8 +186,9 @@
             // txtAge
             // 
             this.txtAge.Location = new System.Drawing.Point(24, 191);
+            this.txtAge.Multiline = true;
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(100, 22);
+            this.txtAge.Size = new System.Drawing.Size(118, 57);
             this.txtAge.TabIndex = 5;
             // 
             // lblAge
@@ -229,6 +231,7 @@
             this.saveTheFileToolStripMenuItem.Name = "saveTheFileToolStripMenuItem";
             this.saveTheFileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveTheFileToolStripMenuItem.Text = "Save The File";
+            this.saveTheFileToolStripMenuItem.Click += new System.EventHandler(this.saveTheFileToolStripMenuItem_Click);
             // 
             // frm
             // 

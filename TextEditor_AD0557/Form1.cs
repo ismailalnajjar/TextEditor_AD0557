@@ -23,6 +23,8 @@ namespace TextEditor_AD0557
             if (FD.ShowDialog() == DialogResult.OK)
             { 
             txt1.Font=FD.Font;
+                txtName.Font=FD.Font;
+                txtAge.Font = FD.Font;
             }
             
 
@@ -76,6 +78,8 @@ namespace TextEditor_AD0557
                 Color color = CD.Color;
 
                 txt1.ForeColor = color;
+                txtName.ForeColor = color;
+                txtAge.ForeColor = color;
 
             }
         }
@@ -117,6 +121,17 @@ namespace TextEditor_AD0557
                 }
             }
 
+        }
+
+        private void saveTheFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StreamWriter SW = new StreamWriter(Application.StartupPath +
+               "\\Text\\" + "Ismail.txt");
+            SW.WriteLine(lblTake.Text + " : " + txt1.Text);
+            SW.WriteLine(lblName.Text + " : " + txtName.Text);
+            SW.WriteLine(lblAge.Text + " : " + txtAge.Text);
+            SW.Close();
+            MessageBox.Show("Saved successfully");
         }
     }
 }
